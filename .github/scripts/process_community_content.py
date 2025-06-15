@@ -102,7 +102,7 @@ Share your GitHub journey and experiences here! Add your story with a pull reque
     return header + '\n'.join(stories)
 
 def main():
-    token = os.environ['GITHUB_TOKEN']
+    token = os.getenv['ACCESS_TOKEN']
     if not token:
         print("Error: Missing GITHUB_TOKEN.", file=sys.stderr)
         sys.exit(1)
