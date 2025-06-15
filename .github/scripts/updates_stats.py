@@ -3,6 +3,8 @@ import os
 import datetime
 import json
 from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).resolve().parents[2]))
 from src.github_api import GitHubAPI
 
 def update_readme_stats(stats, content):
