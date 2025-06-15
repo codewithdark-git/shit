@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 from github import Github
 import markdown
 from datetime import datetime
@@ -7,10 +8,12 @@ from datetime import datetime
 def validate_message(content):
     # Check for basic markdown formatting
     if not content.strip().startswith('-'):
+        print("Error: Message does not start with '-'.", file=sys.stderr)
         return False
     
     # Check for proper attribution format
     if not re.search(r'@[\w-]+', content):
+        print("Error: Message does not contain proper attribution (e.g., @username).", file=sys.stderr)
         return False
     
     return True
@@ -18,14 +21,17 @@ def validate_message(content):
 def validate_story(content):
     # Check for minimum length
     if len(content.strip()) < 50:
+        print("Error: Story is too short (minimum 50 characters).", file=sys.stderr)
         return False
     
-    # Check for basic markdown formatting
-    if not re.search(r'#{1,6}\s+.*', content):
+    # Check for basic markdown formatting (expects a heading)
+    if not re.search(r'^#{1,6}\s+.*', content.strip()):
+        print("Error: Story does not start with a markdown heading (e.g., ## My Story).", file=sys.stderr)
         return False
     
     # Check for author attribution
     if not re.search(r'@[\w-]+', content):
+        print("Error: Story does not contain proper author attribution (e.g., @username).", file=sys.stderr)
         return False
     
     return True
@@ -86,22 +92,73 @@ Share your GitHub journey and experiences here! Add your story with a pull reque
 def main():
     token = os.getenv('GITHUB_TOKEN')
     pr_number = int(os.getenv('PR_NUMBER'))
-    
+    repo_name = os.getenv('GITHUB_REPOSITORY')
+
+    if not token or not pr_number or not repo_name:
+        print("Error: Missing GITHUB_TOKEN, PR_NUMBER, or GITHUB_REPOSITORY environment variables.", file=sys.stderr)
+        sys.exit(1)
+
     g = Github(token)
-    repo = g.get_repo(os.getenv('GITHUB_REPOSITORY'))
-    pr = repo.get_pull(pr_number)
-    
+    try:
+        repo = g.get_repo(repo_name)
+        pr = repo.get_pull(pr_number)
+    except Exception as e:
+        print(f"Error: Could not access GitHub repository or pull request: {e}", file=sys.stderr)
+        sys.exit(1)
+
     files_changed = [f.filename for f in pr.get_files()]
     
     if 'MESSAGES.md' in files_changed:
-        processed_content = process_messages()
-        with open('MESSAGES.md', 'w', encoding='utf-8') as f:
-            f.write(processed_content)
-    
+        try:
+            messages_file_content = repo.get_contents("MESSAGES.md", ref=pr.head.sha).decoded_content.decode('utf-8')
+            # Extract messages after the '---' separator
+            parts = messages_file_content.split('---\n\n', 1)
+            if len(parts) > 1:
+                individual_messages = parts[1].strip().split('\n')
+                for msg in individual_messages:
+                    msg = msg.strip()
+                    if msg: # Process only non-empty lines
+                        if not validate_message(msg):
+                            print("Validation failed for MESSAGES.md", file=sys.stderr)
+                            sys.exit(1)
+            # If all validations pass, process the entire file for sorting and structuring
+            processed_content = process_messages()
+            with open('MESSAGES.md', 'w', encoding='utf-8') as f:
+                f.write(processed_content)
+        except Exception as e:
+            print(f"Error processing MESSAGES.md: {e}", file=sys.stderr)
+            sys.exit(1)
+
     if 'STORIES.md' in files_changed:
-        processed_content = process_stories()
-        with open('STORIES.md', 'w', encoding='utf-8') as f:
-            f.write(processed_content)
+        try:
+            stories_file_content = repo.get_contents("STORIES.md", ref=pr.head.sha).decoded_content.decode('utf-8')
+            # Split stories: header part and then stories starting with '## '
+            header_match = re.match(r'.*?---\n\n', stories_file_content, re.DOTALL)
+            if header_match:
+                header_part = header_match.group(0)
+                stories_part = stories_file_content[len(header_part):]
+            else: # Fallback if --- is not present, consider all content as stories part
+                stories_part = stories_file_content
+
+            individual_stories = re.split(r'(?=^##\s+)', stories_part, flags=re.MULTILINE)
+
+            for story_content in individual_stories:
+                story_content = story_content.strip()
+                if story_content and not story_content.startswith("## Guidelines") and story_content != "# GitHub Stories": # Process actual story content
+                    # Skip empty strings that may result from split if the content doesn't start with ##
+                    if not story_content.startswith('## '):
+                        continue
+                    if not validate_story(story_content):
+                        print("Validation failed for STORIES.md", file=sys.stderr)
+                        sys.exit(1)
+
+            # If all validations pass, process the entire file for sorting and structuring
+            processed_content = process_stories()
+            with open('STORIES.md', 'w', encoding='utf-8') as f:
+                f.write(processed_content)
+        except Exception as e:
+            print(f"Error processing STORIES.md: {e}", file=sys.stderr)
+            sys.exit(1)
 
 if __name__ == '__main__':
     main()
