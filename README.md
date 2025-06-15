@@ -43,11 +43,6 @@ This repository marks a historic milestone - the one billionth repository create
 - JavaScript: 13 repositories, 1669333 total stars
 - C++: 6 repositories, 710932 total stars
 - Go: 5 repositories, 628327 total stars
-- Python Projects
-- JavaScript Projects
-- Java Projects
-- Go Projects
-- Rust Projects
 
 ### 🏷️ Popular Topics
 - AI/ML
