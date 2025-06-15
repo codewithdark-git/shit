@@ -14,8 +14,8 @@ GITHUB_TOKEN = os.getenv('GITHUB_TOKEN') # This should already be set by the wor
 HEADERS = {'Authorization': f'token {GITHUB_TOKEN}'} if GITHUB_TOKEN else {}
 
 # Constants for Trending Repos Log
-TRENDING_LOG_LABEL = "trending-repos-log"
-TRENDING_LOG_TITLE = "Trending Repositories Log"
+TRENDING_LOG_LABEL = "trending-repos"
+TRENDING_LOG_TITLE = "Trending Repositories"
 
 def get_trending_repos():
     # Calculate date for repos created in the last week
