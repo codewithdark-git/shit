@@ -4,7 +4,10 @@ import datetime
 import json
 from pathlib import Path
 import sys
-sys.path.append(str(Path(__file__).resolve().parents[2]))
+
+# Add the repository root to sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
 from src.github_api import GitHubAPI
 
 def update_readme_stats(stats, content):
