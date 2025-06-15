@@ -1,16 +1,16 @@
 # 🚀 Public GitHub Repositories by Category
 
 ## Trending
-- [OpenListTeam/OpenList](https://github.com/OpenListTeam/OpenList): A new AList Fork to Anti Trust Crisis ⭐4370
-- [AasishPokhrel/shit](https://github.com/AasishPokhrel/shit): No description provided ⭐2619
-- [BeehiveInnovations/zen-mcp-server](https://github.com/BeehiveInnovations/zen-mcp-server): The power of Claude Code + [Gemini Pro / Flash / O3 / O3-Mini / OpenRouter / Ollama / Custom Model / All Of The Above] working as one. ⭐1550
-- [rdev/liquid-glass-react](https://github.com/rdev/liquid-glass-react): Apple's Liquid Glass effect for React ⭐1450
-- [guandeh17/Self-Forcing](https://github.com/guandeh17/Self-Forcing): No description provided ⭐1272
-- [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm): Nano vLLM ⭐1100
-- [supermemoryai/supermemory-mcp](https://github.com/supermemoryai/supermemory-mcp): Your memories are in ChatGPT... But nowhere else. Universal Memory MCP makes your memories available to every single LLM. No logins or paywall. One command to set it up. ⭐930
-- [wgsxm/PartCrafter](https://github.com/wgsxm/PartCrafter): PartCrafter: Structured 3D Mesh Generation via Compositional Latent Diffusion Transformers ⭐857
-- [multigres/multigres](https://github.com/multigres/multigres): Vitess for Postgres ⭐610
-- [ios12checker/Windows-Maintenance-Tool](https://github.com/ios12checker/Windows-Maintenance-Tool): No description provided ⭐528
+- [OpenListTeam/OpenList](https://github.com/OpenListTeam/OpenList): A new AList Fork to Anti Trust Crisis ⭐4462
+- [AasishPokhrel/shit](https://github.com/AasishPokhrel/shit): No description provided ⭐2685
+- [rdev/liquid-glass-react](https://github.com/rdev/liquid-glass-react): Apple's Liquid Glass effect for React ⭐1460
+- [guandeh17/Self-Forcing](https://github.com/guandeh17/Self-Forcing): No description provided ⭐1344
+- [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm): Nano vLLM ⭐1112
+- [wgsxm/PartCrafter](https://github.com/wgsxm/PartCrafter): PartCrafter: Structured 3D Mesh Generation via Compositional Latent Diffusion Transformers ⭐894
+- [multigres/multigres](https://github.com/multigres/multigres): Vitess for Postgres ⭐626
+- [ios12checker/Windows-Maintenance-Tool](https://github.com/ios12checker/Windows-Maintenance-Tool): No description provided ⭐536
+- [lucasromerodb/liquid-glass-effect-macos](https://github.com/lucasromerodb/liquid-glass-effect-macos): Demo here ⭐513
+- [shuding/liquid-glass](https://github.com/shuding/liquid-glass): No description provided ⭐445
 
 ## Most Starred
 - [torvalds/linux](https://github.com/torvalds/linux): Linux kernel source tree ⭐100000## Python
