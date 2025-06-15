@@ -3,6 +3,11 @@
 > Created by [@AasishPokhrel](https://github.com/AasishPokhrel) | Last Updated: 2025-06-13
 
 ## 📊 Repository Stats
+- ⭐ Stars: 2862
+- 🍴 Forks: 209
+- 📬 Open Issues: 407
+- 👀 Watchers: 2862
+- 📅 Last Updated: 2025-06-15 18:19 UTC
 - ⭐ Stars: 2812
 - 🍴 Forks: 207
 - 📬 Open Issues: 395
@@ -19,6 +24,11 @@ This repository marks a historic milestone - the one billionth repository create
 ## 📈 GitHub Categories Explorer
 
 ### 🔥 Trending Repositories
+- [OpenListTeam/OpenList](https://github.com/OpenListTeam/OpenList): A new AList Fork to Anti Trust Crisis ⭐5116
+- [AasishPokhrel/shit](https://github.com/AasishPokhrel/shit): None ⭐2862
+- [rdev/liquid-glass-react](https://github.com/rdev/liquid-glass-react): Apple's Liquid Glass effect for React ⭐1590
+- [guandeh17/Self-Forcing](https://github.com/guandeh17/Self-Forcing): None ⭐1570
+- [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm): Nano vLLM ⭐1247
 - [OpenListTeam/OpenList](https://github.com/OpenListTeam/OpenList): A new AList Fork to Anti Trust Crisis ⭐4954
 - [AasishPokhrel/shit](https://github.com/AasishPokhrel/shit): None ⭐2812
 - [rdev/liquid-glass-react](https://github.com/rdev/liquid-glass-react): Apple's Liquid Glass effect for React ⭐1522
@@ -30,6 +40,11 @@ This repository marks a historic milestone - the one billionth repository create
 *Showcasing GitHub's most impactful projects*
 
 ### 🎨 By Programming Language
+- Python: 15 repositories, 2676415 total stars
+- TypeScript: 18 repositories, 2498967 total stars
+- JavaScript: 13 repositories, 1669415 total stars
+- C++: 6 repositories, 710948 total stars
+- Go: 5 repositories, 628386 total stars
 - Python: 15 repositories, 2676179 total stars
 - TypeScript: 18 repositories, 2498728 total stars
 - JavaScript: 13 repositories, 1669333 total stars
