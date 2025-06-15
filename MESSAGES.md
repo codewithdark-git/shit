@@ -7,3 +7,4 @@ _You can add a PR or comment with your congratulations, jokes, or hopes for the 
 
 - “Congrats, GitHub! You’ve come a long way.” — @codewithdark-git
 - “Here’s to another billion!” — @octocat
+- “GPT Shit” - @coder213123
