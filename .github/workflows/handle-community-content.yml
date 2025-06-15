@@ -34,7 +34,21 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
-        run: python .github/scripts/process_community_content.py
+        run: python .github/scripts/process_community_content.py 2> error.txt
+
+      - name: Notify on Failure
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const errorMessage = fs.readFileSync('error.txt', 'utf8');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `Validation failed:\n\`\`\`\n${errorMessage}\n\`\`\``
+            });
 
       - name: Auto-merge if checks pass
         if: success()
