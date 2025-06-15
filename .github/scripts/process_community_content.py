@@ -10,12 +10,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from github_utils import get_or_create_issue
 
 # Constants for Messages Log
-MESSAGES_LOG_LABEL = "community-messages-log"
-MESSAGES_LOG_TITLE = "Community Messages Log"
+MESSAGES_LOG_LABEL = "community-messages"
+MESSAGES_LOG_TITLE = "Community Messages"
 
 # Constants for Stories Log
-STORIES_LOG_LABEL = "community-stories-log"
-STORIES_LOG_TITLE = "Community Stories Log"
+STORIES_LOG_LABEL = "community-stories"
+STORIES_LOG_TITLE = "Community Stories"
 
 def validate_message(content):
     # Check for basic markdown formatting
