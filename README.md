@@ -3,6 +3,11 @@
 > Created by [@AasishPokhrel](https://github.com/AasishPokhrel) | Last Updated: 2025-06-13
 
 ## 📊 Repository Stats
+- ⭐ Stars: 2812
+- 🍴 Forks: 207
+- 📬 Open Issues: 395
+- 👀 Watchers: 2812
+- 📅 Last Updated: 2025-06-15 12:27 UTC
 - ⭐ Stars: 2,213
 - 🍴 Forks: 164
 - 📬 Open Issues: 284
@@ -14,12 +19,22 @@ This repository marks a historic milestone - the one billionth repository create
 ## 📈 GitHub Categories Explorer
 
 ### 🔥 Trending Repositories
+- [OpenListTeam/OpenList](https://github.com/OpenListTeam/OpenList): A new AList Fork to Anti Trust Crisis ⭐4954
+- [AasishPokhrel/shit](https://github.com/AasishPokhrel/shit): None ⭐2812
+- [rdev/liquid-glass-react](https://github.com/rdev/liquid-glass-react): Apple's Liquid Glass effect for React ⭐1522
+- [guandeh17/Self-Forcing](https://github.com/guandeh17/Self-Forcing): None ⭐1474
+- [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm): Nano vLLM ⭐1210
 *Auto-updated daily with the most trending repos*
 
 ### 🌟 Most Starred
 *Showcasing GitHub's most impactful projects*
 
 ### 🎨 By Programming Language
+- Python: 15 repositories, 2676179 total stars
+- TypeScript: 18 repositories, 2498728 total stars
+- JavaScript: 13 repositories, 1669333 total stars
+- C++: 6 repositories, 710932 total stars
+- Go: 5 repositories, 628327 total stars
 - Python Projects
 - JavaScript Projects
 - Java Projects
