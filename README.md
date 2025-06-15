@@ -1,6 +1,7 @@
 # 🎉 The One Billionth GitHub Repository! 🎉
 
 > Created by [@AasishPokhrel](https://github.com/AasishPokhrel) | Last Updated: 2025-06-13
+> Make this PR by [@codewithdark-git](https://github.com/codewithdark-git)
 
 ## 📊 Repository Stats
 - ⭐ Stars: 2862
@@ -8,15 +9,6 @@
 - 📬 Open Issues: 407
 - 👀 Watchers: 2862
 - 📅 Last Updated: 2025-06-15 18:19 UTC
-- ⭐ Stars: 2812
-- 🍴 Forks: 207
-- 📬 Open Issues: 395
-- 👀 Watchers: 2812
-- 📅 Last Updated: 2025-06-15 12:27 UTC
-- ⭐ Stars: 2,213
-- 🍴 Forks: 164
-- 📬 Open Issues: 284
-- 👀 Watchers: 2,213
 
 ## 🎯 What's This?
 This repository marks a historic milestone - the one billionth repository created on GitHub! To celebrate this achievement, we're turning it into a living museum of GitHub's evolution and current state.
