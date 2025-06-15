@@ -102,12 +102,9 @@ Share your GitHub journey and experiences here! Add your story with a pull reque
     return header + '\n'.join(stories)
 
 def main():
-    token = os.getenv('GITHUB_TOKEN')
-    pr_number = int(os.getenv('PR_NUMBER'))
-    repo_name = os.getenv('GITHUB_REPOSITORY')
-
-    if not token or not pr_number or not repo_name:
-        print("Error: Missing GITHUB_TOKEN, PR_NUMBER, or GITHUB_REPOSITORY environment variables.", file=sys.stderr)
+    token = os.environ['GITHUB_TOKEN']
+    if not token:
+        print("Error: Missing GITHUB_TOKEN.", file=sys.stderr)
         sys.exit(1)
 
     g = Github(token)
